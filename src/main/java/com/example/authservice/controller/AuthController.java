@@ -1,7 +1,7 @@
 package com.example.authservice.controller;
 
 import com.example.authservice.model.User;
-import com.example.authservice.service.AuthService;
+import com.example.authservice.service.AuthServiceImpl;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class AuthController {
 
     @Autowired
-    private AuthService authService;
+    private AuthServiceImpl authService;
 
     @GetMapping("/login")
     public String loginPage() {
