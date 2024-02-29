@@ -27,9 +27,9 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(RuntimeException.class)
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
     public String handleRuntimeException(RuntimeException ex, Model model) {
-        model.addAttribute("errorMessage", "Internal Server Error: " + ex.getMessage());
+        model.addAttribute("errorMessage", "Error: " + ex.getMessage());
         return "error-page";
     }
 }

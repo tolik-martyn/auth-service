@@ -14,12 +14,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class AuthController {
 
-    private final AuthService authService;
-
     @Autowired
-    public AuthController(AuthService authService) {
-        this.authService = authService;
-    }
+    private AuthService authService;
 
     @GetMapping("/login")
     public String loginPage() {
